@@ -5,7 +5,7 @@ class NavModel {
     this.#leiro = navLeiro;
   }
 
-  get leiro() {
+  getleiro() {
     return { ...this.#leiro };
   }
 

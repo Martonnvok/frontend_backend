@@ -1,12 +1,11 @@
-
-
 import NavigacioView from "../view/nav/NavigacioView.js";
 import NavModel from "../model/NavModel.js";
 
 class Ncontroller {
+  #nav
   constructor() {
-    const nav = new NavModel();
-    new NavigacioView($(".navigacio", nav.leiro));
+    this.#nav = new NavModel();
+    new NavigacioView($(".navigacio"), this.#nav.getleiro());
   }
 
   

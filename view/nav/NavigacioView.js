@@ -1,7 +1,7 @@
 class NavigacioView {
     #adat = {};
     constructor(szuloElem, adat) {
-        this.navElem = szuloElem.children("nav");
+        this.navElem = szuloElem;
         this.#adat = adat;
         
         this.nav();
