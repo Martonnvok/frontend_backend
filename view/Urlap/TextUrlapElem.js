@@ -15,13 +15,13 @@ class TextUrlapElem {
       .children(".valid");
     this.invalidElem = this.formElem
       .children("div:last-child")
-      .children(".invalid"); //más megoldás: this.invalidElem = $(".invalid:last")
+      .children(".invalid");
     this.inputElem.on("keyup", () => {
       this.#value = this.inputElem.val();
-      let reg = this.#leiro.regex;
-      let regObj = new RegExp(reg);
+      let regex = this.#leiro.regex;
+      let reg = new RegExp(regex);
 
-      if (regObj.test(this.#value)) {
+      if (reg.test(this.#value)) {
         this.#valid = true;
         this.validElem.removeClass("elrejt");
         this.invalidElem.addClass("elrejt");
@@ -57,10 +57,10 @@ class TextUrlapElem {
             id="${this.#key}" 
             name="${this.#key}"
             placeholder="${this.#leiro.placeholder}"  
-            patter="${this.#leiro.regex}"
+            pattern="${this.#leiro.regex}"
             value="${this.#leiro.value}">
             
-            <div class="valid elrejt">OK</div>
+            <div class="valid elrejt">Rendben</div>
             <div class="invalid elrejt">${this.#leiro.validalas}</div>
         </div>
         `;
