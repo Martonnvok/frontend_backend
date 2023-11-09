@@ -5,36 +5,35 @@ class MegjelenesView {
     constructor(szuloElem, adat, minta) {
         this.minta = minta;
         this.#adat = adat;
-        szuloElem.append("<div>");
-        this.tablaElem = szuloElem.children("div");
-        console.log(this.tablaElem);
+        this.divElem = szuloElem;
+        console.log(this.divElem);
+
         this.#megjelenitMinta();
+        this.#megjelenitAdat();
+
     }
 
     #megjelenitMinta() {
-        let txt = "";
-
-        txt += "<ul>";
-        for (const key in this.#minta) {
-            txt += `<li>${this.#minta[key].szMegjelenes}`;
-            this.#megjelenitAdat();
-            txt += "</li>";
+        let txt = "<ul>";
+        for (let i = 0; i < this.#minta.length; i++) {
+            const element = this.#minta[i];
+            txt += `<li>${element} </li>`;
         }
         txt += "</ul>";
-        this.tablaElem.append(txt);
+        this.divElem.append(txt);
     }
 
     #megjelenitAdat() {
-        let txt = "";
+        let txt = "<ul>";
 
-        for (const key in this.#adat) {  
-            txt +=`${this.#adat[key].keresztNev}, ${this.#adat[key].nev}, ${this.#adat[key].szulEv}`;
+        for (const key in this.#adat) {
+            txt += `<li>${this.#adat[key].keresztNev} ${this.#adat[key].nev} ${this.#adat[key].szulEv}</li>`;
         }
-        txt += `<span class="kesz">✔️</span> <span class="megse">❌</span><span class="torol">🗑</span>`;
-       
-        this.tablaElem.append(txt);
+
+        txt += "</ul>";
+        this.divElem.append(txt);
     }
 
-    
+
 }
 export default MegjelenesView;

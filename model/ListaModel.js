@@ -13,7 +13,7 @@ class ListaModel {
   }
 
   getSzulo() {
-    return { ...this.#minta };
+    return this.#minta;
   }
 
 }
