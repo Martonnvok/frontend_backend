@@ -1,0 +1,29 @@
+.valid{
+    color:green;
+}
+.invalid{
+    color:red
+}
+.elrejt{
+    display: none;
+}
+.navigacio a{
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(93, 93, 214);
+}
+.navigacio {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px,
+}
+
+.egySor{
+    display: inline-block;
+    margin: 10px;
+}
+
+li{
+    margin: 10px;
+}
