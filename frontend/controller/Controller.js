@@ -6,7 +6,7 @@ import UrlapModel from "../model/Marci/UrlapModel.js";
 class Controller {
   constructor() {
 
-    /*this.dataService.getAxiosData(
+   /* this.dataService.getAxiosData(
       "http://localhost:8000/api/tasks",
       this.megjelenit, this.urlapModel.getLeiro()
     );

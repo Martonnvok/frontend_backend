@@ -50,7 +50,7 @@ class UrlapView {
         default:
       }
     }
-    let txt = "<input type='submit' id='submit' value='OK'>";
+    let txt = "<input type='submit' id='submit' value='Felvissz'>";
     this.formElem.append(txt);
   }
 

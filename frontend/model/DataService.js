@@ -4,10 +4,6 @@ class DataService {
       .get(url)
       .then(function (response) {
         //handle success
-        console.log("response", response);
-        console.log("data", response.data);
-        console.log("státusz", response.request.status);
-        console.log("text", response.statusText);
         callback(response.data, leiro);
       })
       .catch(function (error) {
@@ -16,7 +12,6 @@ class DataService {
       })
       .finally(function () {
         // always executed
-        console.log("finally");
       });
   }
 

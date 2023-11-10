@@ -5,7 +5,6 @@ class NavigacioView {
         this.#adat = adat;
         
         this.nav();
-        console.log(this.navElem);
 
     }
 

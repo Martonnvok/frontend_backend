@@ -5,9 +5,7 @@ class MegjelenesView {
     constructor(szuloElem, adat, leiro) {
         this.#adat = adat;
         this.#leiro = leiro;
-        console.log(this.#leiro)
         this.divElem = szuloElem;
-        console.log(this.divElem);
 
         this.#megjelenitMinta();
         this.#megjelenitAdat();
@@ -35,6 +33,7 @@ class MegjelenesView {
         }
 
         txt += "</ul>";
+        console.log(this.divElem)
         this.divElem.append(txt);
     }
 
