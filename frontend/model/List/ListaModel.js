@@ -1,5 +1,5 @@
 import { listaLeiro } from "./lista.js";
-import { urlapLeiro } from "./urlapleiro.js";
+import { urlapLeiro } from "../Urlap/urlapleiro.js";
 class ListaModel {
   #leiro = {};
   #minta = [];

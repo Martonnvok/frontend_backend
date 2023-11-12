@@ -1,7 +1,7 @@
-import UrlapView from "../../view/Marci/MasikUrlap/UrlapViews.js";
-import UrlapModel from "../../model/Marci/UrlapModel.js";
-import MegjelenesView from "../../view/Marci/DivesMegjelenes/MegjelenesView.js";
-import ListaModel from "../../model/Marci/ListaModel.js";
+import UrlapView from "../../view/Dives/DivesUrlap/UrlapViews.js";
+import UrlapModel from "../../model/Urlap/UrlapModel.js";
+import MegjelenesView from "../../view/Dives/DivesMegjelenes/MegjelenesView.js";
+import ListaModel from "../../model/List/ListaModel.js";
 import DataService from "../../model/DataService.js";
 class MasikController {
     constructor() {

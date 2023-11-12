@@ -1,7 +1,7 @@
-import DataService from "../model/DataService.js";
-import Megjelenit from "../view/Megjelenes/Megjelenit.js";
-import UrlapView from "../view/Marci/Urlap/UrlapView.js";
-import UrlapModel from "../model/Marci/UrlapModel.js";
+import DataService from "../../model/DataService.js";
+import Megjelenit from "../../view/Table/Megjelenit.js";
+import UrlapView from "../../view/Dives/Urlap/UrlapView.js";
+import UrlapModel from "../../model/Urlap/UrlapModel.js";
 
 class Controller {
   constructor() {

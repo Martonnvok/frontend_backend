@@ -1,5 +1,5 @@
-import NavigacioView from "../../view/Marci/nav/NavigacioView.js";
-import NavModel from "../../model/Marci/NavModel.js";
+import NavigacioView from "../../view/Dives/nav/NavigacioView.js";
+import NavModel from "../../model/Nav/NavModel.js";
 
 class Ncontroller {
   #nav

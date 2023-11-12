@@ -61,13 +61,13 @@ class UrlapView {
   }
 
   #megjelenitAdatok() {
-    let adatokLista = "<ul>";
+    let txt = "<ul>";
     for (const key in this.#urlapAdat) {
-      adatokLista += `<li class="egySor"> ${this.#urlapAdat[key]}</li>`;
+      txt += `<li class="egySor"> ${this.#urlapAdat[key]}</li>`;
     }
-    adatokLista += "</ul>";
+    txt += "</ul>";
 
-    this.szuloElem.append(adatokLista);
+    this.szuloElem.append(txt);
   }
 
 }
