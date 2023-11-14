@@ -14,13 +14,13 @@ class MasikController {
       this.urlapModel= new UrlapModel();
       this.dataService = new DataService();
       this.dataService.getAxiosData(
-        "http://localhost:8000/api/tasks",
+        "http://localhost:8000/api/writers",
         this.megjelenit, this.urlapModel.getLeiro()
       );
 
       $(window).on("click", (event)=>{
         
-        this.dataService.postAxiosData("http://localhost:8000/api/tasks", 
+        this.dataService.postAxiosData("http://localhost:8000/api/writers", 
           event.detail
         );
       });

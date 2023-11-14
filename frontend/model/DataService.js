@@ -1,4 +1,7 @@
 class DataService {
+  constructor() {
+    axios.defaults.baseURL = "http://localhost:8000/";
+  }
   getAxiosData(url, callback, leiro) {
     axios
       .get(url)
@@ -12,10 +15,12 @@ class DataService {
       })
       .finally(function () {
         // always executed
+        console.log("Finally");
       });
   }
 
   postAxiosData(url, data) {
+    console.log(data);
     axios
       .post(url, data)
       .then((response) => {
@@ -24,6 +29,33 @@ class DataService {
       .catch((error) => {
         console.log("hiba", error);
       });
+
+  }
+
+  putAxiosData(url, data) {
+    console.log(data);
+    axios
+      .put(`${url}/${data.id}`, data)
+      .then((response) => {
+        console.log("RESP", response);
+      })
+      .catch((error) => {
+        console.log("hiba", error);
+      });
+
+  }
+
+  deleteAxiosData(url, data) {
+    console.log(data);
+    axios
+      .delete(`${url}/${id}`)
+      .then((response) => {
+        console.log("RESP", response);
+      })
+      .catch((error) => {
+        console.log("hiba", error);
+      });
+
   }
 }
 

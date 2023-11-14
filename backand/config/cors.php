@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://www.thunderclient.com','https://localhost:8000','https://db2:8000'],
+    'allowed_origins' => ['https://www.thunderclient.com','http://localhost:5500','http://127.0.0.1:5500'],
 
     'allowed_origins_patterns' => [],
 
