@@ -10,6 +10,7 @@ class MasikController {
 
       /*new UrlapView($(".urlap"), MODEL.getLeiro());
       new MegjelenesView($(".divesLista"), LMODEL.getleiro(), LMODEL.geturlapLeiro());*/
+      
       this.urlapModel= new UrlapModel();
       this.dataService = new DataService();
       this.dataService.getAxiosData(
