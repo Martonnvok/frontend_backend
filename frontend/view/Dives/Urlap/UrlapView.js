@@ -31,6 +31,7 @@ class UrlapView {
         console.log("Nem valid az űrlap");
       }
       console.log(this.#urlapAdat)
+      this.#esemenyTrigger("click");
     });
   }
 
@@ -52,6 +53,11 @@ class UrlapView {
     }
     let txt = "<input type='submit' id='submit' value='Felvissz'>";
     this.formElem.append(txt);
+  }
+
+  #esemenyTrigger(esemenyNev){
+    const esemenyem = new CustomEvent(esemenyNev, { detail: this.#urlapAdat });
+    window.dispatchEvent(esemenyem);
   }
 
 

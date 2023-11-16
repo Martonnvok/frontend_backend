@@ -12,15 +12,13 @@ class Controller {
       "http://localhost:8000/api/writers",
       this.megjelenit, this.urlapModel.getLeiro()
     );
+    $(window).on("click", (event) =>{
+      this.dataService.postAxiosData("http://localhost:8000/api/writers", event.detail)
+    })
 
-    /*this.dataService.postAxiosData("http://localhost:8000/api/writers", {
-      nev: "Jenő",
-      szul: 1666,
-    });*/
-
-    this.dataService.putAxiosData(
+    /*this.dataService.putAxiosData(
       "http://localhost:8000/api/writers", this.urlapModel.getLeiro()
-    );
+    );*/
 
     this.dataService.deleteAxiosData(
       "http://localhost:8000/api/writers", this.urlapModel.getLeiro()
@@ -30,7 +28,7 @@ class Controller {
   }
 
   megjelenit(list, leiro) {
-    new UrlapView($(".ujadat"), leiro);
+    new UrlapView($(".urlap"), leiro);
     new Megjelenit(list, $(".lista"), leiro);
     
   }

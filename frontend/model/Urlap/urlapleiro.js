@@ -1,12 +1,12 @@
 export const urlapLeiro = {
-  kNev:{
+  /*kNev:{
     megjelenes: "Vezetéknév",
     tipus: "text",
     value: "",
     placeholder: "Vezetéknév:",
     regex: "[A-Z][a-z]{2,15}", 
     validalas: "Név nagybetűvel kezdődik, legalább 3 karakter!"
-  },
+  },*/
   nev: {
     megjelenes: "Név",
     tipus: "text",

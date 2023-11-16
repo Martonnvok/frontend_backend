@@ -4,6 +4,7 @@ class TextUrlapElem {
   #value = "";
   #valid = true;
   constructor(key, leiro, formElem) {
+    console.log("buzi")
     this.#key = key;
     this.#leiro = leiro;
     this.formElem = formElem;
