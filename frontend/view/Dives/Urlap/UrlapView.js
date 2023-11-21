@@ -4,7 +4,6 @@ import NumberUrlapElem from "./NumberUrlapElem.js";
 class UrlapView {
   #leiro = {};
   #urlapElemLista = [];
-  #urlapNumberLista = [];
   #osszesElemValidE = true;
   #urlapAdat = {};
   constructor(szuloElem, leiro) {
@@ -15,24 +14,25 @@ class UrlapView {
 
     this.#urlapOsszerak();
     this.submitElem = $("#submit");
-    this.submitElem.on("click", (event) => {
+    this.formElem.on("submit", (event) => {
       event.preventDefault();
       this.#osszesElemValidE = true;
-      this.#urlapElemLista.forEach(elem=>{
-        console.log(elem)
+      this.#urlapElemLista.forEach((elem) => {
         this.#osszesElemValidE = this.#osszesElemValidE && elem.valid;
-      })
-      if(this.#osszesElemValidE){
-        this.#urlapElemLista.forEach((elem)=>{
-            this.#urlapAdat[elem.key] = elem.value;
-        })
-        console.log("Valid az űrlap")
-      }else{
+      });
+
+      if (this.#osszesElemValidE) {
+        this.#urlapElemLista.forEach((elem) => {
+          this.#urlapAdat[elem.key] = elem.value;
+        });
+        console.log("Valid az űrlap");
+      } else {
         console.log("Nem valid az űrlap");
       }
-      console.log(this.#urlapAdat)
-      this.#esemenyTrigger("click");
+      console.log(this.#urlapAdat);
+      this.#esemenyTrigger("submit");
     });
+  
   }
 
   get urlapAdat(){

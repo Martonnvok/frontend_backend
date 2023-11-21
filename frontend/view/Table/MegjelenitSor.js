@@ -11,6 +11,7 @@ class MegjelenitSor {
     this.keszElem = this.sorElem.children("td").children(".kesz");
     this.torolElem = this.sorElem.children("td").children(".torol");
     this.megseElem = this.sorElem.children("td").children(".megse");
+
     if (this.#adat.kesz) {
       this.sorElem.css("background-color", "lightgreen");
       this.megseElem.css("display", "inline");
@@ -20,15 +21,16 @@ class MegjelenitSor {
       this.megseElem.css("display", "none");
       this.keszElem.css("display", "inline");
     }
-    this.keszElem.on("click", () => {
+    this.keszElem.on("kesz", () => {
       this.#esemenyTrigger("kesz");
     });
-    this.megseElem.on("click", () => {
-      this.#esemenyTrigger("kesz");
+    this.megseElem.on("megsem", () => {
+      this.#esemenyTrigger("megsem");
     });
+
     this.torolElem.on("click", () => {
       this.sorElem.remove();
-      this.#esemenyTrigger("torles");
+      this.#esemenyTrigger("torol");
     });
   }
 
@@ -48,7 +50,7 @@ class MegjelenitSor {
     this.tablaElem.append(txt);
   }
   #esemenyTrigger(esemenyNev) {
-    const esemenyem = new CustomEvent(esemenyNev, { detail: this.#index });
+    const esemenyem = new CustomEvent(esemenyNev, { detail: this.#adat.id });
     window.dispatchEvent(esemenyem);
   }
 }

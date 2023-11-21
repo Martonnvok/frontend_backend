@@ -1,11 +1,16 @@
 export const navLeiro = {
     index: {
       href: "index.html",
-      nev: "Táblás megoldás"
+      nev: "Admin"
     },
 
     indexdiv:{
         href: "indexdiv.html",
-        nev: "Dives megoldás"
-    }
+        nev: "Publikus"
+    },
+
+    kivalasztott:{
+      href: "kivalasztott.html",
+      nev: "Kiválasztott"
+  }
   };

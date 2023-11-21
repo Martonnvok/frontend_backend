@@ -14,36 +14,35 @@ class MegjelenesView {
     }
 
     #megjelenitMinta() {
-        let txt = "<ul>";
+        let txt = "<div>";
 
         for (const key in this.#leiro) {
             const element = this.#leiro[key].megjelenes;
-            txt += `<li class ="egySor">${element} </li>`;
+            txt += `<p class ="egySor">${element} </p>`;
         }
-        txt += "</ul>";
+        txt += "</div>";
         this.divElem.append(txt);
     }
 
     #megjelenitAdat() {
-        let txt = "<ul>";
+        let txt = `<div>`;
 
         for (const key in this.#adat) {
-            txt += `<li>${this.#adat[key].keresztNev} ${this.#adat[key].nev} ${this.#adat[key].szulEv}`;
-            txt += `<span class="kesz">✔️</span> <span class="megse">❌</span><span class="torol">🗑</span></li>`;
+            txt += `<div class="divStilus"> <p>${this.#adat[key].nev} ${this.#adat[key].szul}</p></div> `;
         }
 
-        txt += "</ul>";
+        txt += `</div>`;
         console.log(this.divElem)
         this.divElem.append(txt);
     }
 
     #gombok() {
-        this.divElem.on("click", "li", (event) => {
+        this.divElem.on("click", (event) => {
             const sorElem = $(event.currentTarget);
             const keszElem = sorElem.find(".kesz");
             const torolElem = sorElem.find(".torol");
             const megseElem = sorElem.find(".megse");
-    
+
             if (keszElem.is(event.target)) {
                 sorElem.css("background-color", "lightgreen");
                 megseElem.css("display", "inline");

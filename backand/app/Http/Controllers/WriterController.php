@@ -25,7 +25,7 @@ class WriterController extends Controller
 
     public function destroy($id)
     {
-        $writer = Writer::find($id);
+        $writer = Writer::find($id)->delete();
         return response()->json(['message'=>'Sikeres törlés'],201);
     }
 

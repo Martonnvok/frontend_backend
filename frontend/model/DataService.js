@@ -20,7 +20,6 @@ class DataService {
   }
 
   postAxiosData(url, data) {
-    console.log(data);
     axios
       .post(url, data)
       .then((response) => {
@@ -45,8 +44,8 @@ class DataService {
 
   }
 
-  deleteAxiosData(url, data) {
-    console.log(data);
+  deleteAxiosData(url, id) {
+    console.log(id);
     axios
       .delete(`${url}/${id}`)
       .then((response) => {
