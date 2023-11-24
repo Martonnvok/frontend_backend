@@ -1,4 +1,8 @@
 export const urlapLeiro = {
+  id: {
+    megjelenes: "Azonosító",
+  },
+  
   nev: {
     megjelenes: "Név",
     tipus: "text",
@@ -11,7 +15,7 @@ export const urlapLeiro = {
   szul: {
     megjelenes: "Születési év",
     tipus: "number",
-    value: "2000",
+    value: "2002",
     regex: {
       min: 1900,
       max: 2023,

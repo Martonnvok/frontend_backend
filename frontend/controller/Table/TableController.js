@@ -4,6 +4,8 @@ import UrlapView from "../../view/Dives/Urlap/UrlapView.js";
 import UrlapModel from "../../model/Urlap/UrlapModel.js";
 
 class Controller {
+  #id 
+
   constructor() {
     this.dataService = new DataService();
     this.urlapModel = new UrlapModel();
@@ -14,17 +16,23 @@ class Controller {
     );
 
     $(window).on("submit", (event) => {
-      console.log(event.detail)
-      this.dataService.postAxiosData("http://localhost:8000/api/writers", event.detail)
-      
+      this.dataService.postAxiosData("http://localhost:8000/api/writers", event.detail);
+      console.log("Felvitt Adatok: ", event.detail);
+
     })
 
-    /*this.dataService.putAxiosData(
-      "http://localhost:8000/api/writers", this.urlapModel.getLeiro()
-    );*/
+    $(window).on("id", (event) => {
+      console.log(event.detail);
+      this.#id = event.detail;
+    });
+    $(window).on("szerkeszt", (event) => {
+      console.log(event.detail);
+      console.log(this.#id)
+      this.dataService.updateAxiosData("http://localhost:8000/api/writers", this.#id, event.detail);
+    });
 
-   $(window).on("torol", (event) => {
-    console.log("Töröltem: ", event.detail);
+    $(window).on("torol", (event) => {
+      console.log("Töröltem: ", event.detail);
       this.dataService.deleteAxiosData("http://localhost:8000/api/writers", event.detail);
     })
 

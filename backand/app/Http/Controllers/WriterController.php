@@ -31,10 +31,10 @@ class WriterController extends Controller
 
     public function update(Request $request, $id)
     {
-        $writer = Writer::find();
-        $writer->nev = $request->nev;
-        $writer->szul = $request->szul;
-        $writer->save();
+        $users = Writer::find($id);
+        $users->nev = $request->nev;
+        $users->szul = $request->szul;
+        $users->save();
 
         return Writer::find('/writer');
     }
