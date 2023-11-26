@@ -5,7 +5,7 @@ class Ncontroller {
   #nav
   constructor() {
     this.#nav = new NavModel();
-    new NavigacioView($(".navigacio"), this.#nav.getleiro());
+    new NavigacioView($(".navigacioSav"), this.#nav.getleiro());
   }
 
   

@@ -9,12 +9,12 @@ class NavigacioView {
     }
 
     nav() {
-        let txt = "<nav>";
+        let txt = `<div class = "navigacio egySorNav">`;
         for (const key in this.#adat) {
             txt += `<a href="${this.#adat[key].href}">${this.#adat[key].nev}</a>`;
 
         }
-        txt += "</nav>";
+        txt += `</div>`;
         this.navElem.append(txt);
     }
 

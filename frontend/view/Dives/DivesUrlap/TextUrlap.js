@@ -48,10 +48,7 @@ class TextUrlap {
     #textElem() {
       let txt = `
           <div class="mb-3 mt-3">
-              <label for="${this.#key}" 
-              class="form-label">
-              ${this.#leiro.megjelenes}
-              </label>
+              <label for="${this.#key}" class="form-label">${this.#leiro.megjelenes}</label>
               
               <input type="${this.#leiro.tipus}" class="form-control" 
               id="${this.#key}" 

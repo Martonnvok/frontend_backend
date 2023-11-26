@@ -6,33 +6,26 @@ class MegjelenesView {
         this.#adat = adat;
         this.#leiro = leiro;
         this.divElem = szuloElem;
-
-        this.#megjelenitMinta();
+        
         this.#megjelenitAdat();
         this.#gombok();
 
     }
 
-    #megjelenitMinta() {
-        let txt = "<div>";
-
-        for (const key in this.#leiro) {
-            const element = this.#leiro[key].megjelenes;
-            txt += `<p class ="egySor">${element} </p>`;
-        }
-        txt += "</div>";
-        this.divElem.append(txt);
-    }
-
     #megjelenitAdat() {
-        let txt = `<div>`;
+        let txt = `<div class='divContainer'>`;
 
         for (const key in this.#adat) {
-            txt += `<div class="divStilus"> <p>${this.#adat[key].nev} ${this.#adat[key].szul}</p></div> `;
+            txt += `
+                <div class="divStilus egySor">
+                    <p>Azonosító: ${this.#adat[key].id}</p>
+                    <p>Név: ${this.#adat[key].nev}</p>
+                    <p>Születési év: ${this.#adat[key].szul}</p>
+                </div>
+            `;
         }
 
         txt += `</div>`;
-        console.log(this.divElem)
         this.divElem.append(txt);
     }
 
